@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+
+    function login(){
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        return (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada);
+    }
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var tentativa = 1;
+    var logado = false;
+
+    while(tentativa <=3 && logado == false){
+        if (login()) {
+            alert("Bem-vindo ao sistema " + loginCadastrado + "!");
+            logado = true;
+        }
+        else if(tentativa == 3){
+
+            alert("Usuário bloqueado, entre em contato com o suporte!");               
+            tentativa = tentativa + 1;            
+        }
+        else{
+
+            alert("Login inválido. Tente novamente, você ainda tem mais " + (3 - tentativa) + " tentativa(s).");
+            tentativa = tentativa + 1;    
+        }
+    }
+
+</script>
