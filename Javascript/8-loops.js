@@ -31,3 +31,9 @@ while(contador<3){
     }
     contador += 1;
 } 
+
+for(let i = 0 ; i <3 ; i++){
+    if(listaDeDestinos[i] == destino){
+        destinoExiste = true;
+        }
+}
